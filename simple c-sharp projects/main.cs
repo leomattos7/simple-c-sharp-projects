@@ -7,11 +7,7 @@ namespace simple_c_sharp_projects
     {
         static void exibeInformações(Produtos p1)
         {
-            double valor = p1.valorTotalEmEstoque();
-            Console.WriteLine("Dados do produto: " + p1.Nome);
-            Console.WriteLine("Valor: R$ " + p1.Preco);
-            Console.WriteLine("Quantidade: " + p1.Quantidade);
-            Console.WriteLine("Valor total: R$ " + valor);
+            Console.WriteLine("Dados do produto: " + p1);
         }
         static void Main(string[] args)
         {

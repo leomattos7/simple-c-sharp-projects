@@ -30,5 +30,9 @@ namespace produtos
         {
             Quantidade -= quantidade;
         }
+        public override string ToString()
+        {
+            return Nome + ", R$ " + Preco + ", " + Quantidade + " unidades, Total: R$ " + valorTotalEmEstoque();
+        }
     }
 }
