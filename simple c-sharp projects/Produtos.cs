@@ -8,19 +8,16 @@ namespace produtos
         public double Preco;
         public int Quantidade;
 
+        public Produtos(string nome, double preco, int quantidade)
+        {
+            Nome = nome;
+            Preco = preco;
+            Quantidade = quantidade;
+        }
+
         public double valorTotalEmEstoque()
         {
             return (Preco * Quantidade);
-        }
-        public Produtos cadastrarProdutos()
-        {
-            Console.WriteLine("Digite o nome do produto");
-            Nome = Console.ReadLine();
-            Console.WriteLine("Digite o preco ");
-            Preco = Convert.ToDouble(Console.ReadLine());
-            Console.WriteLine("Digite a quantidade");
-            Quantidade = Convert.ToInt32(Console.ReadLine());
-            return this;
         }
         public void adicionarProdutos(int quantidade)
         {
@@ -32,7 +29,13 @@ namespace produtos
         }
         public override string ToString()
         {
-            return Nome + ", R$ " + Preco + ", " + Quantidade + " unidades, Total: R$ " + valorTotalEmEstoque();
+            return Nome + 
+                   ", R$ " 
+                   + Preco 
+                   + ", " 
+                   + Quantidade 
+                   + " unidades, Total: R$ " 
+                   + valorTotalEmEstoque();
         }
     }
 }
